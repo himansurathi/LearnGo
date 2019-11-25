@@ -22,7 +22,11 @@ func main() {
 	newMultipleCards.print()
 
 	realDeck := newDeck()
-	realDeck.print()
+	hand, remainingDeck := realDeck.deal(5)
+	fmt.Println("***************Hand Drawn*******************")
+	hand.print()
+	fmt.Println("***************Remaining Deck******************")
+	remainingDeck.print()
 }
 
 func newCard() string {

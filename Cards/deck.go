@@ -37,3 +37,8 @@ func newDeck() deck {
 
 	return cards
 }
+
+// Returning Multiple values from function
+func (d deck) deal(handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
