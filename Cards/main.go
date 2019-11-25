@@ -15,14 +15,14 @@ func main() {
 	testCard = newCard()
 	fmt.Println(testCard)
 
-	multipleCards := []string{"Five of Clubs", newCard()}
+	multipleCards := deck{"Five of Clubs", newCard()}
 	fmt.Println(multipleCards)
 
 	newMultipleCards := append(multipleCards, "Six of Spades")
-	for i, c := range newMultipleCards {
-		fmt.Println(i, c)
-	}
+	newMultipleCards.print()
 
+	realDeck := newDeck()
+	realDeck.print()
 }
 
 func newCard() string {
